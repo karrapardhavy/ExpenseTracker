@@ -12,17 +12,15 @@
         align-items: center;
         height: 100vh;
         margin: 3;
-        background-image: url('');
         background-position: center;
-        background-color:#F7FFE5;
+background-color:#F7FFE5;
     }
     .container {
         max-width: 600px;
         padding: 20px;
         border-radius: 5px;
         background-color:#BB8493 ;
-        position:fixed;
-        top:150px;
+ ;
     }
     h2 {
         text-align: center;
@@ -41,7 +39,6 @@
         border: none;
         background-color:#F7FFE5;
         color:#BB8493;
-        
         cursor: pointer;
     }
     button:hover {
@@ -51,37 +48,23 @@
         width: 100%;
         border-collapse: collapse;
     }
-
     th, td {
         border-bottom: 1px solid #ddd;
         padding: 8px;
         text-align: left;
-        color:#49243E;
+ color:#49243E;
     }
-
     #total {
         font-weight: bold;
         margin-top: 20px;
         font-size: 18px;
         text-align: left;
-        color:#49243E;
-        
+color:#49243E;
     }
 h2{
 color:#49243E;
 }
-#p{
-min-height:80px;
-min-width:600px;
-border:2px solid #BB8493;
-border-bottom: 1px solid #ddd;
-max-width: 700px;
-padding: 20px;
-border-radius: 5px;
-background-color:#BB8493;
-position:fixed;
-bottom:0px;
-}
+
 </style>
 </head>
 <body>
@@ -89,18 +72,16 @@ bottom:0px;
     <h2>Expense Tracker</h2>
     <form id="expenseForm">
         <input type="text" id="expenseName" placeholder="Expense Name" required>
-        <input type="number" id="expenseAmount" placeholder="Cost" required>
+        <input type="number" id="expenseAmount" placeholder="Amount" required>
         <input type="date" id="expenseDate" required>
         <button type="submit">Add Expense</button>
-</div>
-<div id="p">
     </form>
     
     <table id="expenseTable">
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Cost</th>
+                <th>Amount</th>
                 <th>Date</th>
                 <th>Action</th>
             </tr>
@@ -109,7 +90,7 @@ bottom:0px;
     </table>
     <div id="total"></div>
 </div>
-</div>
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const expenseForm = document.getElementById('expenseForm');
@@ -132,7 +113,7 @@ bottom:0px;
                     <td><button onclick="editExpense(${index})">Edit</button> <button onclick="deleteExpense(${index})">Delete</button></td>
                 `;
             });
-            totalDisplay.textContent = Total: $${totalAmount.toFixed(2)};
+            totalDisplay.textContent = `Total: $${totalAmount.toFixed(2)}`;
             saveExpenses();
         }
 
